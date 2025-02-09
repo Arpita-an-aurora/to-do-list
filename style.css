@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+}
+body{
+    background-color: #16213e;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    padding: 4vh;
+    min-width: 15vw;
+    max-width: 65vw;
+    border: 2px solid #4A929E;
+    border-radius: 2vh;
+    color: #B1BEDB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#new-task{
+    padding: 0.8vw;
+    color: #16213e;
+    width: 27vw;
+    height: 3vh;
+}
+#toggle{
+    position: absolute;
+    top: 2%;
+    left: 1%;
+    border: none;
+    padding: 2vh;
+    font-size: medium;
+    background-color: rgb(177, 190, 219);
+    color: #16213e;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 2vh;
+}
+#submit{
+    border-radius: 1vh;
+    padding: 1vw;
+    border: none;
+    color: #16213e;
+    background-color: #4A929E;
+}
+#submit:hover{
+    cursor: pointer;
+}
+
+li{
+    border: #4A929E 1px solid;
+    margin-bottom: 2%;
+    padding: 2%;
+    border-radius: 2vh;
+    /* flex-grow: 1; */
+    display: flex;
+    align-items: center;
+    /* gap: 3px; Further reduced gap to bring text closer to checkbox */
+    width: 30vw;
+    justify-content: space-between;
+    height: 5vh;
+    /* background-color: green; */
+
+}
+.checkbox {
+    margin-right: 2vh;
+    display: inline-block;
+    position: relative;
+    appearance: none;
+    border: 1px solid #4A929E;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.checkbox:checked::after {
+    content: '✔';
+    color: #4A929E;
+    font-size: 14px;
+    position: absolute;
+    left: 10%;
+    top: -20%;
+}
+.remove{
+    margin-left: auto;
+    height: 19px;
+    width: 19px;
+    border-radius: 50%;
+    background-color: red;
+    text-align: center;
+    display: flex;
+    font-weight: 600;
+    font-size: medium;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    line-height: 0%;
+    position: relative;
+    top: -1px;
+    padding-bottom: 1px;
+    /* padding-right: 1px; */
+}
+
+@media screen and (max-width: 638px){
+    .container{
+        max-width: 80vw;
+    }
+    li{
+        padding: 4%;
+        margin-bottom: 5%;
+    }
+}
